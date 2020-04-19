@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="XamarinFormsDarkTheme.Styles.LightTheme">
+    <Color x:Key="NavigationPrimary">#2196F3</Color>
+    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+    <Color x:Key="TextPrimaryColor">#B0000000</Color>
+    <Color x:Key="TextSecondaryColor">#80000000</Color>
+    <Color x:Key="TextTernaryColor">#C8C8C8</Color>
+    <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+        <Setter Property="BarTextColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="#B0000000" />
+    </Style>
+</ResourceDictionary>
