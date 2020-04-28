@@ -47,20 +47,5 @@ namespace XamarinFormsDarkTheme.Views
             if (viewModel.Items.Count == 0)
                 viewModel.IsBusy = true;
         }
-
-        private void MenuItem_OnClicked(object sender, EventArgs e)
-        {
-            if (App.AppTheme == "dark")
-            {
-                App.AppTheme = "light";
-                App.Current.Resources = new LightTheme();
-            }
-            else
-            {
-                App.AppTheme = "dark";
-                App.Current.Resources = new DarkTheme();
-            }
-            
-        }
     }
 }

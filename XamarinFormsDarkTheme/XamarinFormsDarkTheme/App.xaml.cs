@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using XamarinFormsDarkTheme.Services;
+using XamarinFormsDarkTheme.Styles;
 using XamarinFormsDarkTheme.Views;
 
 namespace XamarinFormsDarkTheme
@@ -15,6 +15,22 @@ namespace XamarinFormsDarkTheme
 
             DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
+            Xamarin.Essentials.AppTheme theme = AppInfo.RequestedTheme;
+            switch (theme)
+            {
+                case Xamarin.Essentials.AppTheme.Dark:
+                    AppTheme = "dark";
+                    Current.Resources = new DarkTheme();
+                    break;
+                case Xamarin.Essentials.AppTheme.Light:
+                    AppTheme = "light";
+                    Current.Resources = new LightTheme();
+                    break;
+                default:
+                    AppTheme = "light";
+                    Current.Resources = new LightTheme();
+                    break;
+            }
         }
 
         protected override void OnStart()
